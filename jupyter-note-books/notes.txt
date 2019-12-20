@@ -1,0 +1,98 @@
+
+Default values in modules- don't give iterables as default values
+
+A package is a directory that contains a set of modules and a file called __init__.py
+    - the __init__.py file can be empty
+    - or it can list the file in __all__ = ["file1",...]
+    
+from folder import * ---> means import every object in the module except the objects beginning with __
+                            or
+                          import every object from list given in __all__
+                          
+$python -d "import module" --> can be used to check if a module exists
+
+module names are stored in __name__ variable
+
+
+Byte-Compiled Code, .pyc is used by the compiler to speed up the start-up  time
+when the python interpreter is invoked with -O flag, the optimized code is generated and stored in .pyo file.(assert statements are removed)
+
+
+The sys module:
+    - sys.path determines the interpreters search paths to find a module, a path can be added using append()
+    - ps1 and ps2 have the strings representing the primary and secondary promts
+    - dir() is used to find which names a module defines, dir(sys)
+    
+yield v/s return
+break v/s continue
+
+range(start, end, steps)
+enumerate(iterable)
+zip(iterable1, iterable2)
+filter(function, seq)
+map(function, list)
+lambda funtions--- useful for defining dict keys
+
+File Handling:
+    - open(filename, mode)
+        - supports r-read, w-write, a-append, r+-read & write modes
+        - by default read mode is set
+    -read(size)
+        -size arg is optional
+        -by default reads the complete file contents
+    -readline()
+        -reads a single line from the file
+    -write()
+        -writes the content of a string to the file, returning None
+    -tell()
+        -returns the current position of the file object
+    -seek(offset, from-what-pos)
+        -used to change the current position of the file object
+        -from-what can be 0-start of the file, 1-current position, 2-end of the file
+    -close()
+        -used to close the current file and return the any system resources occupied
+        -returns True if successful
+    -input()
+        -accepts a string input from the user
+    -peek(n)
+        -returns n bytes without moving the file object position
+    -fileno()
+        -returns the underlying file descriptor
+    
+    
+    
+* shutil package - useful for manipulating files
+* pickle module  - used to convert a python object into string
+        - pickle.dump(x,f) - writes the x object to file f
+        - pickle.load(f)   - unpickling the object
+* struct module - used to convert to and from binary representation
+        - struct.pack()    - takes struct format string, value and returns a byte object
+        - struct.unpack()  - takes struct format string, byte/byte array object and returns a tuple object
+        
+        
+*Multiprocessing and threading:
+    -subprocess module
+    -threading module
+    -mutexes and semaphores
+    -deadlocks and spinlocks
+    
+*Error Handling:
+    - Syntax errors
+    - Exceptions
+        - try, except and finally
+        - raise to cause an exception
+        
+*Debugging and profiling:
+    - debugging-
+        -interactive mode- python -i filename.py
+        -pdb- python -m pdb filename.py
+    -profiling
+        -cprofile package
+        -timeit
+        
+
+*Unit Testing:
+    - doctest, unittest, nose and py.test
+        
+
+

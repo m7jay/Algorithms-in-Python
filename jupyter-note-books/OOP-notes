@@ -1,0 +1,22 @@
+Object oriented programming allows to create our own custom data types
+
+*When an object is created:
+    - first the __new__() methos is called (constructor)
+    - then __init__() is called which initializes the object to a intial state
+    
+*classes have methods and data- read only or wrtiable(can be deleted with del)
+*namespaces and scopes
+
+OOP principles:
+    - specialisation- all classes inherit object class, is-as relationship for inheritance
+    - polymorphism- all methods are virtual
+    - aggregation- when a class has an instance of other classes, has-a relation
+    
+
+*Decorators are used to specify some transformations on the methods and data:
+    - @my_decorator- can be used to create custom benchmarks function
+    - @classmethod and @staticmethos are the commonly used decorators
+*Observer pattern- properties are used to access and set the data instead of the simple accessors and the setters
+    _ @property- function to return a data
+*Singleton pattern- override the __new__() funtion to make a class singleton class
+
